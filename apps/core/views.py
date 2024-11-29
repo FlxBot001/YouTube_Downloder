@@ -3,6 +3,10 @@ from django.core.cache import cache
 from health_check.views import MainView
 from rest_framework.decorators import action
 from sentry_sdk import capture_exception
+from rest_framework import viewsets
+from .models import YourModel
+from .serializers import YourModelSerializer
+
 
 class HealthCheckView(MainView):
     def get(self, request, *args, **kwargs):
